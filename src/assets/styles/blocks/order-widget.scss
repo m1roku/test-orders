@@ -1,0 +1,30 @@
+.order-widget {
+  background-color: #F6FAFB;
+  border-radius: 2px;
+  box-shadow: 0 4px 12px #EBEBEB;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background-color: rgba(237, 232, 245, 0.5);
+  }
+
+  &__body {
+    padding: 0 16px 8px 16px;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
+  dt {
+    font-weight: 700;
+    color: #647A8C;
+  }
+
+}

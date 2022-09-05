@@ -1,0 +1,36 @@
+.delete-order {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: $text-icon;
+
+  svg {
+    display: block;
+    fill: currentColor;
+  }
+
+  &__dots {
+    &:hover {
+      color: $text-active;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 100%;
+    display: flex;
+    align-items: baseline;
+    column-gap: 10px;
+    min-width: 148px;
+    padding: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      color: $text-active
+    }
+  }
+}

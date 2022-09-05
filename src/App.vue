@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="wrapper">
+    <AppHeader></AppHeader>
+    <main class="main">
+      <div class="container main__container">
+        <aside class="aside">
+          <AppFilters />
+        </aside>
+        <section class="main__content">
+          <div class="main__content-wrapper">
+            <AppSorting class="main__sorting" />
+            <PageSwitcher class="main__page-switcher" />
+          </div>
+          <div class="main__view">
+            <router-view/>
+          </div>
+        </section>
+      </div>
+    </main>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import AppHeader from '@/components/AppHeader.vue';
+import AppFilters from '@/components/AppFilters.vue';
+import AppSorting from '@/components/AppSorting.vue';
+import PageSwitcher from '@/components/PageSwitcher.vue';
+import { mapActions } from 'vuex';
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+export default {
+  components: {
+    AppHeader, AppFilters, AppSorting, PageSwitcher,
+  },
+  methods: {
+    ...mapActions(['getOrders']),
+  },
+  mounted() {
+    this.getOrders();
+  },
+};
+</script>

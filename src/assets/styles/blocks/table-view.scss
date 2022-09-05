@@ -1,0 +1,23 @@
+.table-view {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $border-weak;
+  background-color: $bg-secondary;
+
+  th {
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    background-color: $bg-table-th;
+    border-right: 2px solid $border-secondary;
+
+    &:last-child {
+      border-right: none
+    }
+  }
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid $border-weak;
+  }
+}

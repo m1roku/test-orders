@@ -1,0 +1,16 @@
+.input {
+  display: block;
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  &__field {
+    width: 100%;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid $border-weak;
+  }
+}

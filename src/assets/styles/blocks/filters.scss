@@ -1,0 +1,13 @@
+.filters {
+  padding: 8px 16px 16px 16px;
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__section {
+    & + & {
+      margin-top: 16px;
+    }
+  }
+}
